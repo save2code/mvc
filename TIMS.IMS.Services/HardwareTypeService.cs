@@ -57,6 +57,7 @@ namespace TIMS.IMS.Services
 
         public void SaveHardwareType()
         {
+            //Commit of unitofwork
             unitOfWork.Commit();
         }
 
