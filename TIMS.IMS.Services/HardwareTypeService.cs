@@ -14,6 +14,7 @@ namespace TIMS.IMS.Services
         HardwareType GetHardwareTypeByName(string name);
         void CreateHardwareType(HardwareType hardwareType);
         void SaveHardwareType();
+
     }
 
     public class HardwareTypeService : IHardwareTypeService
