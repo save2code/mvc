@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - TIMS-Inventory Management System</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/Angular")
+</head>
+<body class="page-portfolio" cz-shortcut-listen="true">
+    <!-- fixed navbar -->
+    <div class="navbar navbar-fixed-top headroom animated slideDown ontop-now">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <img src="~/Content/images/logo.jpg" alt="Progressus HTML5 template">
+                <b>  TIMS-Inventory Management System</b>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="~/Home/Dashboard">Home</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Physical <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/Physical/Search">SEARCH</a></li>
+                            <li class="active"><a href="~/Physical/Create">CREATE</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">vLan <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/vLan/Search">SEARCH</a></li>
+                            <li class="active"><a href="~/vLan/Create">CREATE</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Grids <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/Grid/Search">SEARCH</a></li>
+                            <li class="active"><a href="~/Grid/Create">CREATE</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">LDAP</a></li>
+                            <li class="active"><a href="#">AIM</a></li>
+                            <li><a href="#">SERVICE NOW</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- end of fixed navbar -->
+    <!-- end of header -->
+    <!-- Layout body container  -->
+    <div class="container">
+        <div class="page-title text-center"></div>
+        <div class="body-content">
+            @RenderBody()
+        </div>
+    </div>
+    <!-- end of Layout body container  -->
+    <!--footer-->
+    <footer id="footer" class="footer-default">
+        <div class="footer1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 widget">
+                        <div class="widget-body">
+                            <p> AXP Internal</p>
+                            <p>
+                                This internal American Express website is part of the American Express Company’s internal online network and is restricted to authorized employees, contractors and vendors of American Express Company (“American Express”). For a limited time, American Express is making a portion of t​his internal website available to authorized employees, contractors and vendors of American Express Global Business Travel, a joint venture that is not wholly-owned by American Express or any of its subsidiaries. All access to and use of this site must be made in accordance with your location’s current version of American Express’ Code of Conduct, Community Participation Rules and all other applicable American Express and/or third-party terms, policies and standards. Any unauthorized or unlawful access to or use of this site may result in personal liability, criminal prosecution and/or disciplinary action up to and including ​termination of your employment or contract.
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- /row of widgets -->
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 widget pull-right">
+                        <div class="widget-body">
+                            <p class="text-right">
+                                Copyright © @DateTime.Now.Year American Express Company. All Rights Reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- /row of widgets -->
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+    <!-- JavaScript libs -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+   
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+
+

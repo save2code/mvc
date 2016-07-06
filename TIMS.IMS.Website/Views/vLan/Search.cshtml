@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- form Start-->
+
+@using (Html.BeginForm("vLan", "Search", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4> <span class="glyphicon glyphicon-search"></span><b> Search vLan</b></h4>
+    <hr />
+}
+

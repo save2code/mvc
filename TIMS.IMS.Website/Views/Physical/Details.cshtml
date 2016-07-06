@@ -1,0 +1,232 @@
+﻿@{
+    ViewBag.Title = "TIMS-IMS:: View Physical Inventory Details";
+}
+<div class="row">
+    @using (Html.BeginForm("Physical", "Details", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4> <span class="glyphicon glyphicon-list-alt"></span> View Physical Inventory Details</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div id="divcollapse" class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <span class="glyphicon glyphicon-hdd"></span>
+                        <b> Asset Information</b>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <!-- Asset Panel Start-->
+                        <!-- Asset Info. Section Start-->
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Serial #</label>
+                            <div class="col-md-10">
+                                <label name="Serial" class="form-control-static">FCH1935J4H5</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Hardware PO #</label>
+                            <div class="col-md-10">
+                                <label name="HardwarePO" class="form-control-static">PO1159004</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Manufacturer</label>
+                            <div class="col-md-10">
+                                <label name="Manufacturer" class="form-control-static">Cisco</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Model</label>
+                            <div class="col-md-10">
+                                <label name="Model" class="form-control-static">UCS B200 M4</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Hardware Type</label>
+                            <div class="col-md-10">
+                                <lable name="HardwareType" class="form-control-static">UCS Chassis</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Disk Capacity</label>
+                            <div class="col-md-10">
+                                <lable name="DiskCapacity" class="form-control-static"> 256 TB</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Memory Size</label>
+                            <div class="col-md-10">
+                                <lable name="MemorySize" class="form-control-static">256 GB</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Number of CPUs</label>
+                            <div class="col-md-10">
+                                <lable name=">NumberofCPUs" class="form-control-static">2</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">CPU Cores</label>
+                            <div class="col-md-10">
+                                <lable name="CPUCores" class="form-control-static">24</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Nodes</label>
+                            <div class="col-md-10">
+                                <lable name="Nodes" class="form-control-static">-</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Available for use</label>
+                            <div class="col-md-10">
+                                <lable type="text" name="Availforuse" class="form-control-static" >Yes</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Asset Category</label>
+                            <div class="col-md-10">
+                                <lable name="HardwareType" class="form-control-static">Blade Server</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Maint. Contract/Site #</label>
+                            <div class="col-md-10">
+                                <lable type="text" name="MaintContractNum" class="form-control-static" >94659838</lable>
+                            </div>
+                        </div>
+                        <!-- Asset Info. Section End-->
+                        <!-- Asset Panel End-->
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="divcollapse" class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <span class="glyphicon glyphicon-credit-card"></span><b> Billing Information</b>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <!-- Billing Panel Start-->
+                        <!-- Billing Section Start-->
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Project Name</label>
+                            <div class="col-md-10">
+                                <lable type="text" name="ProjectName" class="form-control-static" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Maint PO #</label>
+                            <div class="col-md-10">
+                                <lable type="text" name="MaintPONum" class="form-control-static" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Warranty Start Date</label>
+                            <div class="col-md-10">
+                                <lable type="date" name="WarrantyStartDate" class="form-control-static" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Warranty Expiration Date</label>
+                            <div class="col-md-10">
+                                <lable type="date" name="WarrantyExpDate" class="form-control-static" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Delivery Date</label>
+                            <div class="col-md-10">
+                                <lable type="date" name="DeliveryDate" class="form-control-static" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">H/W Cost</label>
+                            <div class="col-md-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>
+                                    <lable type="text" class="form-control-static" name="HWCost">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Maint. Cost</label>
+                            <div class="col-md-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>
+                                    <lable type="text" class="form-control-static" name="MaintCost">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Support Cost</label>
+                            <div class="col-md-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon">$</span>
+                                    <lable type="text" class="form-control-static" name="SupportCost">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Billing Section End-->
+                        <!-- Billing Panel End-->
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="divcollapse" class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        <span class="glyphicon glyphicon-globe"></span>
+                        <b> Location Information</b>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <!-- Location Panel Start-->
+                        <!-- Location Section Start-->
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Data Center</label>
+                            <div class="col-md-10">
+                                <lable name="HardwareType" class="form-control-static">UCS Chassis</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Rack Number</label>
+                            <div class="col-md-10">
+                                <lable name="HardwareType" class="form-control-static">UCS Chassis</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Slot</label>
+                            <div class="col-md-10">
+                                <lable name="HardwareType" class="form-control-static">UCS Chassis</lable>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Blade Chasis</label>
+                            <div class="col-md-10">
+                                <lable name="HardwareType" class="form-control-static">UCS Chassis</lable>
+                            </div>
+                        </div>
+                        <!-- Location Section End-->
+                        <!-- Location Panel End-->
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="pull-right">
+                <input type="submit" class="btn btn-success" value="Submit" />
+                <input type="submit" class="btn btn-warning" value="Reset" />
+                <input type="submit" class="btn btn-primary" value="Cancel" />
+
+            </div>
+        </div>
+
+    }
+</div>
+
+

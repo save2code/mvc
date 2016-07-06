@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- form Start-->
+
+@using (Html.BeginForm("vLan", "Create", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4> <span class="glyphicon glyphicon-plus-sign"></span><b> Create New vLan</b></h4>
+    <hr />
+    <div ng-app="TIMS_INV" ng-controller="vLan" class="panel-group" id="vLan">
+
+        <!-- vLan Info. Section Start-->
+        <div class="form-group">
+            <label class="col-md-3 control-label">vlan Name</label>
+            <div class="col-md-3">
+                <input type="text" name="vlanName" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Switch</label>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>----Select----</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Default Gateway</label>
+            <div class="col-md-3">
+                <input type="text" name="DefaultGateway" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Description</label>
+            <div class="col-md-3">
+                <input type="text" name="Description" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Subnet</label>
+            <div class="col-md-3">
+                <input type="text" name="Subnet" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Data Center</label>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>----Select----</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">vlan Tag</label>
+            <div class="col-md-3">
+                <input type="text" name="vlanTag" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">For Which Environment</label>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>----Select----</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Assignable</label>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>----Select----</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Server Type</label>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>----Select----</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">DC Function</label>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>----Select----</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Mid Range Tier</label>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>----Select----</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Architect or Engineer</label>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>----Select----</option>
+                </select>
+            </div>
+        </div>
+       
+        <!-- vLan Info. Section End-->
+
+        <br />
+        <div class="panel">
+            <div class="pull-right">
+                <input type="submit" class="btn btn-success" value="Submit" />
+                <input type="submit" class="btn btn-warning" value="Reset" />
+                <input type="submit" class="btn btn-primary" value="Cancel" />
+            </div>
+        </div>
+    </div>
+}
+

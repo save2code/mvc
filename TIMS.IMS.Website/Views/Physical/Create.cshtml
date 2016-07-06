@@ -1,0 +1,330 @@
+﻿@{
+    ViewBag.Title = "TIMS-IMS:: Create New Physical Inventory";
+}
+<!-- form Start-->
+<style>
+    .animate-if {
+  background:white;
+  border:1px solid black;
+  padding:10px;
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+</style>
+@using (Html.BeginForm("Create", "Physical", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4> <span class="glyphicon glyphicon-plus-sign"></span><b> Create New Physical Inventory</b></h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    <div ng-controller="Physical" class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div id="divcollapse" class="panel-heading">
+                <h3 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    <span class="glyphicon glyphicon-hdd"></span>
+                    <b> Asset Information</b>
+                </h3>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+
+                    <div ng-app="myApp" ng-controller="myCtrl">
+                        <p>Input something in the input box:</p>
+                        <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+                        <h1>Hello {{name}}</h1>
+                    </div>
+
+                    <!-- Asset Panel Start-->
+                    <!-- Asset Info. Section Start-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Hardware Type</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Host Name</label>
+                        <div class="col-md-3">
+                            <input type="text" name="HostName" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">AIM ID</label>
+                        <div class="col-md-3">
+                            <input type="text" name="AimId" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Environment</label>
+                        <div class="col-md-3">
+                            <input type="text" name="Environment" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Serial #</label>
+                        <div class="col-md-3">
+                            <input type="text" name="Serial" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Hardware PO #</label>
+                        <div class="col-md-3">
+                            <input type="text" name="HardwarePO" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Manufacturer</label>
+                        <div class="col-md-3">
+                            <input type="text" name="Manufacturer" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Model</label>
+                        <div class="col-md-3">
+                            <input type="text" name="Model" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Status</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Asset Category</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Appliance Serial #</label>
+                        <div class="col-md-3">
+                            <input type="text" name="ApplianceSerial" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">No. of Nodes</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Disk Capacity</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Memory Size</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Number of CPUs</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">CPU Cores</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Available for use</label>
+                        <div class="col-md-3">
+                            <input type="text" name="Availforuse" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Maint. Contract/Site #</label>
+                        <div class="col-md-3">
+                            <input type="text" name="MaintContractNum" class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Asset Info. Section End-->
+                    <!-- Asset Panel End-->
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div id="divcollapse" class="panel-heading">
+                <h3 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    <span class="glyphicon glyphicon-credit-card"></span><b> Billing Information</b>
+                </h3>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <!-- Billing Panel Start-->
+                    <!-- Billing Section Start-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Maint PO #</label>
+                        <div class="col-md-3">
+                            <input type="text" name="MaintPONum" ng-model="MaintPONum3"  class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group animate-if"   > 
+                        <label class="col-md-3 control-label">Warranty Start Date</label>
+                        <div class="col-md-3">
+                            <input type="date" name="WarrantyStartDate" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Warranty Expiration Date</label>
+                        <div class="col-md-3">
+                            <input type="date" name="WarrantyExpDate" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Delivery Date</label>
+                        <div class="col-md-3">
+                            <input type="date" name="DeliveryDate" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">H/W Cost</label>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control" name="HWCost">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Maint. Cost</label>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control" name="MaintCost">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Support Cost</label>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control" name="SupportCost">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Decommissioned Date</label>
+                        <div class="col-md-3">
+                            <input type="date" name="Decommdt" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Disposal Request Date</label>
+                        <div class="col-md-3">
+                            <input type="date" name="DispReqdt" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Data Center Removal Date</label>
+                        <div class="col-md-3">
+                            <input type="date" name="DCRemovaldt" class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Billing Section End-->
+                    <!-- Billing Panel End-->
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div id="divcollapse" class="panel-heading">
+                <h3 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    <span class="glyphicon glyphicon-globe"></span>
+                    <b> Location Information</b>
+                </h3>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <!-- Location Panel Start-->
+                    <!-- Location Section Start-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Data Center</label>
+                        <div class="col-md-3">
+                            <select class="form-control" name="DataCenter">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Rack Number</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Slot</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Blade Chasis</label>
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>----Select----</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Location Section End-->
+                    <!-- Location Panel End-->
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="panel">
+            <div class="pull-right">
+                <input type="submit" class="btn btn-success" value="Submit" />
+                <input type="submit" class="btn btn-warning" value="Reset" />
+                <input type="submit" class="btn btn-primary" value="Cancel" />
+            </div>
+        </div>
+    </div>
+
+}
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+        $scope.name = "John";
+    });
+</script>
+<!--end of form content-->

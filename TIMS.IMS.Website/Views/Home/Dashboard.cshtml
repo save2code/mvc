@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- form Start-->
+
+@using (Html.BeginForm("Home", "Dashboard", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4> <span class="glyphicon glyphicon-th-large"></span><b> Dashboard</b></h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-sm-2 col-md-2">
+            <div class="thumbnail">
+                <img src="~/Content/images/physical.png" alt="..." style="width:100px;height:100px;">
+                <div class="caption text-center">
+                    <p>
+                        <h6>Manage Physical Inventory</h6>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2 col-md-2">
+            <div class="thumbnail">
+                <img src="~/Content/images/vLan.jpg" alt="..." style="width:100px;height:100px;">
+                <div class="caption text-center">
+                    <p>
+                        <h6>Manage vLans</h6>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2 col-md-2">
+            <div class="thumbnail">
+                <img src="~/Content/images/Grids.jpg" alt="..." style="width:100px;height:100px;">
+                <div class="caption text-center">
+                    <h6>Manage Grids</h6>
+                </div>
+            </div>
+        </div>
+   
+   
+    </div>
+}
